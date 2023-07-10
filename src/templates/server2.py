@@ -16,7 +16,7 @@ class MyHTTPRequestHandler(server.SimpleHTTPRequestHandler):
 
     def do_OPTIONS(self):
         self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', "http://hackerone1.sentry.io")
+        self.send_header('Access-Control-Allow-Origin', "https://hackerone1.sentry.io")
         self.send_header("Access-Control-Allow-Methods", "*")
         self.send_header("Access-Control-Allow-Headers", "*")
         self.send_header("Access-Control-Allow-Credentials", "true")
@@ -28,7 +28,7 @@ class MyHTTPRequestHandler(server.SimpleHTTPRequestHandler):
             cookies = {}
             #print(self.headers)
             self.send_response(200)
-            self.send_header('Access-Control-Allow-Origin', "http://hackerone1.sentry.io")
+            self.send_header('Access-Control-Allow-Origin', "https://hackerone1.sentry.io")
             self.send_header("Access-Control-Allow-Methods", "*")
             self.send_header("Access-Control-Allow-Headers", "*")
             self.send_header("Access-Control-Allow-Credentials", "true")
